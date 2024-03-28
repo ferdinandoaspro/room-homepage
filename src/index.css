@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+    .section-body {
+        @apply tracking-[-0.02rem] text-dark-gray font-[500] leading-[1.35rem]
+    }
+}
