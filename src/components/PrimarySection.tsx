@@ -1,4 +1,4 @@
-export default function PrimarySection({backgroundCount, children} : {backgroundCount: number, children: JSX.Element}) {
+export default function PrimarySection({backgroundCount, children} : {backgroundCount: number, children: React.ReactNode}) {
 
     const sectionTitle: Array<string> = ["Discover innovative ways to decorate", 
                                          "We are available all across the globe",
@@ -28,10 +28,15 @@ export default function PrimarySection({backgroundCount, children} : {background
             <p className="section-body">
                 {sectionDescription[backgroundCount - 1]}
             </p>
-            <div className="flex items-center gap-6 mt-[2.25rem] mb-3">
+            <button className="flex items-center gap-6 mt-[2.25rem] mb-3 group hover:text-dark-gray">
                 <span className="tracking-[0.7rem] font-[600] text-[15px]">SHOP NOW</span>
-                <img src="src/assets/images/icon-arrow.svg" alt="" />
-            </div>
+                <svg className="group-hover:fill-dark-gray" width="40" height="12" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M34.05 0l5.481 5.527h.008v.008L40
+                            6l-.461.465v.063l-.062-.001L34.049 12l-.662-.668
+                            4.765-4.805H0v-1h38.206l-4.82-4.86L34.05 0z" 
+                            fill="currentColor" fillRule="nonzero"/>
+                </svg>
+            </button>
             {children}
         </section>
     )

@@ -1,5 +1,5 @@
 export default function ImageSelectors({handleIncr, handleDecr, position, display}: 
-                                        {handleIncr: () => void, handleDecr: () => void, position: string, display: string}) {
+                    {handleIncr: () => void, handleDecr: () => void, position: string, display: string}) {
     return (
         <div className={`z-10 absolute ${position} ${display}`}>
             <button onClick={handleDecr}  className="px-5 py-4 bg-black hover:bg-very-dark-gray" aria-labelledby="previous-image">
