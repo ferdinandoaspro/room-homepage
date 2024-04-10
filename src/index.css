@@ -6,4 +6,7 @@
     .section-body {
         @apply tracking-[-0.02rem] text-dark-gray font-[500] leading-[1.35rem]
     }
+    .section-tablet-layout {
+        @apply md:flex md:justify-center md:items-center
+    }
 }

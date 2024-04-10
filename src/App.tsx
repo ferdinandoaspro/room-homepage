@@ -25,16 +25,16 @@ function App() {
                         position={"bottom-0 right-0"} 
                         display={"md:hidden"} />
       </Header>
-      <main className="font-league-spartan">
+      <main className="font-league-spartan md:contents">
         <PrimarySection backgroundCount={backgroundCount}>
           <ImageSelectors handleIncr={increaseCount} 
                           handleDecr={decreaseCount} 
                           position={"bottom-0 left-0"} 
                           display={"max-md:hidden"} />
         </PrimarySection>
-        <img src="src/assets/images/image-about-dark.jpg" alt="" className="w-full h-full"/>
+        <img src="src/assets/images/image-about-dark.jpg" alt="" className="w-full h-full md:col-span-3"/>
         <AboutSection />
-        <img src="src/assets/images/image-about-light.jpg" alt="" className="w-full h-full"/>
+        <img src="src/assets/images/image-about-light.jpg" alt="" className="w-full h-full md:col-span-3"/>
       </main>
     </>
   )
