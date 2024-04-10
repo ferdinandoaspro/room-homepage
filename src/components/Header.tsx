@@ -1,8 +1,8 @@
 export default function Header({backgroundCount, children, openDialog} : 
                     {backgroundCount: number, children: React.ReactNode[], openDialog: () => void}) {
 
-    const headerDesktopSrc: string = `src/assets/images/desktop-image-hero-${backgroundCount}.jpg`
-    const headerMobileSrc: string = `src/assets/images/mobile-image-hero-${backgroundCount}.jpg`
+    const headerDesktopSrc: string = `/images/desktop-image-hero-${backgroundCount}.jpg`
+    const headerMobileSrc: string = `/images/mobile-image-hero-${backgroundCount}.jpg`
     const headerAlts: Array<string> = ["Two white chairs beside a white table",
                                         "An orange, a green and a white chair",
                                         "Side view of a black chair"]
@@ -13,7 +13,7 @@ export default function Header({backgroundCount, children, openDialog} :
         max-md:aspect-[16/10] max-md:w-screen md:col-start-1 md:col-span-6">
             <nav className="z-10 flex items-center px-2 h-24 w-full font-[700] md:px-8 lg:px-16 lg:h-36">
                 <button className="p-3 md:hidden" aria-labelledby="open-menu" onClick={openDialog}>
-                   <img src="src/assets/images/icon-hamburger.svg" alt="" />
+                   <img src="/images/icon-hamburger.svg" alt="" />
                    <span className="sr-only" id="open-menu">Open navigation menu</span>
                 </button>
                 <img src="src/assets/images/logo.svg" alt="Room logo"

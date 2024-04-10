@@ -32,9 +32,9 @@ function App() {
                           position={"bottom-0 left-0"} 
                           display={"max-md:hidden"} />
         </PrimarySection>
-        <img src="src/assets/images/image-about-dark.jpg" alt="" className="w-full h-full md:col-span-3"/>
+        <img src="/images/image-about-dark.jpg" alt="" className="w-full h-full md:col-span-3"/>
         <AboutSection />
-        <img src="src/assets/images/image-about-light.jpg" alt="" className="w-full h-full md:col-span-3"/>
+        <img src="/images/image-about-light.jpg" alt="" className="w-full h-full md:col-span-3"/>
       </main>
     </>
   )

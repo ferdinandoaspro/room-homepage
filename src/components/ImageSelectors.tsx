@@ -7,11 +7,11 @@ export default function ImageSelectors({handleIncr, handleDecr, position, displa
         <div className={`z-10 absolute md:w-full md:grid md:grid-cols-4 ${position} ${display}`}>
             <div className="col-span-1">
                 <button onClick={handleDecr}  className={buttonStyle} aria-labelledby="previous-image">
-                    <img src="src/assets/images/icon-angle-left.svg" alt="" className="w-[13px] h-[17px] md-[14px] md:h-[24px]"/>
+                    <img src="/images/icon-angle-left.svg" alt="" className="w-[13px] h-[17px] md-[14px] md:h-[24px]"/>
                     <span className="sr-only" id="previous-image">Previous image</span>
                 </button>
                 <button onClick={handleIncr}  className={buttonStyle} aria-labelledby="next-image">
-                    <img src="src/assets/images/icon-angle-right.svg" alt="" className="w-[13px] h-[17px] md-[14px] md:h-[24px]"/>
+                    <img src="/images/icon-angle-right.svg" alt="" className="w-[13px] h-[17px] md-[14px] md:h-[24px]"/>
                     <span className="sr-only" id="next-image">Next image</span>
                 </button>
             </div>          
