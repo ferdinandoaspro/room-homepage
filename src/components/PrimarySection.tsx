@@ -21,16 +21,17 @@ export default function PrimarySection({backgroundCount, children} : {background
                                                 customers want for their home and office.`]
 
     return (
-        <div className="relative px-8 py-14 section-tablet-layout md:row-start-1 md:col-start-7 md:col-span-4 lg:px-[5.25rem] lg:py-28">
+        <div className="relative px-8 md:max-lg:px-5 py-14 section-tablet-layout md:row-start-1 
+                        md:col-start-6 md:col-span-5 lg:col-start-7 lg:col-span-4 lg:px-[5.25rem] lg:py-28 2xl:px-40">
             <section>
-                <h1 className="mb-4 text-3xl font-[600] tracking-[-0.04em] min-[375px]:text-[2.5rem] md:mb-3 md:text-[1.85rem] lg:text-4xl xl:text-5xl">
+                <h1 className="mb-4 text-3xl font-[600] tracking-[-0.04em] min-[375px]:text-[2.5rem] md:mb-1 md:max-lg:tracking-[-0.05em] lg:mb-3 md:text-[1.75rem] lg:text-4xl xl:text-5xl">
                     {sectionTitle[backgroundCount - 1]}
                 </h1>
                 <p className="section-body">
                     {sectionDescription[backgroundCount - 1]}
                 </p>
-                <button className="flex items-center gap-6 mb-3 mt-9 group md:mt-5 hover:text-dark-gray">
-                    <span className="tracking-[0.7rem] font-[600] text-[15px] md:text-[1rem] md:font-[500]">SHOP NOW</span>
+                <button className="flex items-center gap-6 mb-3 mt-9 group md:mt-1 lg:mt-5 hover:text-dark-gray">
+                    <span className="tracking-[0.7rem] font-[600] text-[15px] lg:text-[1rem] md:font-[500]">SHOP NOW</span>
                     <svg className="group-hover:fill-dark-gray" width="40" height="12" xmlns="http://www.w3.org/2000/svg">
                         <path d="M34.05 0l5.481 5.527h.008v.008L40
                                 6l-.461.465v.063l-.062-.001L34.049 12l-.662-.668

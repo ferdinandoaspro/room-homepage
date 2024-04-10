@@ -1,7 +1,7 @@
 export default function NavMenuOptions({display} : {display: string}) {
     const options: Array<string> = ["home", "shop", "about", "contact"];
     return (
-    <menu className={`flex flex-row gap-3 sm:gap-4 ${display}`}>
+    <menu className={`flex flex-row gap-4 md:max-lg:gap-3 ${display}`}>
         <>
         {options.map((option, index) => {
         return <li key={index}>

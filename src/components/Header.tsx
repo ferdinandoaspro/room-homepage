@@ -10,8 +10,8 @@ export default function Header({backgroundCount, children, openDialog} :
     
     return (
         <header className="relative flex flex-col justify-between min-h-[360px] text-white 
-        max-md:aspect-[16/10] max-md:w-screen md:col-start-1 md:col-span-6">
-            <nav className="z-10 flex items-center px-2 h-24 w-full font-[700] md:px-8 lg:px-16 lg:h-36">
+        max-md:aspect-[16/10] md:max-lg:h-[55vh] max-md:w-screen md:col-start-1 md:col-span-5 lg:col-span-6">
+            <nav className="z-10 flex items-center px-2 h-[6rem] w-full font-[700] md:px-8 lg:px-16 lg:h-36">
                 <button className="p-3 md:hidden" aria-labelledby="open-menu" onClick={openDialog}>
                    <img src="/images/icon-hamburger.svg" alt="" />
                    <span className="sr-only" id="open-menu">Open navigation menu</span>
@@ -21,9 +21,9 @@ export default function Header({backgroundCount, children, openDialog} :
                 {children[0]}  
                 {children[1]}  
             </nav>
-            <picture className="absolute w-full h-full">
+            <picture className="absolute w-full h-full md:max-lg:h-[56vh]">
                 <source srcSet={headerDesktopSrc} media="(min-width: 768px)"/>
-                <img src={headerMobileSrc} alt={headerAlts[backgroundCount - 1]} className="w-full h-full"/>
+                <img src={headerMobileSrc} alt={headerAlts[backgroundCount - 1]} className="w-full h-full md:max-lg:h-[56vh]"/>
             </picture>
             {children[2]}
         </header>

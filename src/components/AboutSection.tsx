@@ -1,8 +1,8 @@
 export default function AboutSection() {
     return (
-        <div className="px-8 pt-12 pb-10 lg:px-10 section-tablet-layout md:col-span-4">
+        <div className="px-8 pt-12 pb-10 lg:px-10 section-tablet-layout md:col-span-4 md:max-lg:px-5 2xl:px-32">
             <section className="md:text-start">
-                <h2 className="mb-5 tracking-[0.35rem] font-[700] text-[15px] md:mb-3 lg:text-[17px]">ABOUT OUR FURNITURE</h2>
+                <h2 className="mb-5 tracking-[0.35rem] font-[700] text-[15px] md:mb-2 lg:mb-3 lg:text-[17px]">ABOUT OUR FURNITURE</h2>
                 <p className="section-body">
                     Our multifunctional collection blends design and
                     function to suit your individual taste. Make each
