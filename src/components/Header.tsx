@@ -16,7 +16,7 @@ export default function Header({backgroundCount, children, openDialog} :
                    <img src="/images/icon-hamburger.svg" alt="" />
                    <span className="sr-only" id="open-menu">Open navigation menu</span>
                 </button>
-                <img src="src/assets/images/logo.svg" alt="Room logo"
+                <img src="/images/logo.svg" alt="Room logo"
                 className="w-[62px] h-[14px] max-md:mx-auto max-md:translate-x-[-40%] md:mr-8 lg:mr-12"/>
                 {children[0]}  
                 {children[1]}  
