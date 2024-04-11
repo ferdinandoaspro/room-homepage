@@ -16,7 +16,7 @@ export default function NavMenu({dialogRef, closeDialog} : {dialogRef: RefObject
                     <img src="/images/icon-close.svg" alt="" className="w-[20px] h-[20px]"/>
                     <span className="sr-only" id="close-menu">Close navigation menu</span>
                 </button>
-            <NavMenuOptions display={"flex"}/>
+                <NavMenuOptions display={"flex"}/>
             </div>
         </dialog>
     )

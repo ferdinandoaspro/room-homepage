@@ -10,26 +10,27 @@ import {useState} from "react"
 
 function App() {
 
-  const [backgroundCount, setBackgroundCount] = useState(1)
+  const [backgroundCount, setBackgroundCount] = useState(0)
   const layoutHook = useLayout();
   const dialogHook = useDialog();
  
-  const increaseCount = () => backgroundCount === 3 ? setBackgroundCount(1) : setBackgroundCount(backgroundCount + 1)
-  const decreaseCount = () => backgroundCount === 1 ? setBackgroundCount(3) : setBackgroundCount(backgroundCount - 1)
+  const increaseCount = () => backgroundCount === 2 ? setBackgroundCount(0) : setBackgroundCount(backgroundCount + 1)
+  const decreaseCount = () => backgroundCount === 0 ? setBackgroundCount(2) : setBackgroundCount(backgroundCount - 1)
+  const tabletLayout = layoutHook.width >= 768
 
   return (
     <>
       <Header backgroundCount={backgroundCount} openDialog={dialogHook.openDialog}>
-        {layoutHook.width < 786 && <NavMenu dialogRef={dialogHook.dialogRef} closeDialog={dialogHook.closeDialog}/>}
-        {layoutHook.width >= 768 && <NavMenuOptions display={"max-md:hidden"}/>}
-        {layoutHook.width < 768 && <ImageSelectors handleIncr={increaseCount} 
+        {!tabletLayout && <NavMenu dialogRef={dialogHook.dialogRef} closeDialog={dialogHook.closeDialog}/>}
+        {tabletLayout && <NavMenuOptions display={"max-md:hidden"}/>}
+        {!tabletLayout && <ImageSelectors handleIncr={increaseCount} 
                         handleDecr={decreaseCount} 
                         position={"bottom-0 right-0"} 
                         display={"md:hidden"} />}
       </Header>
       <main className="font-league-spartan md:contents">
         <PrimarySection backgroundCount={backgroundCount}>
-          {layoutHook.width >= 768 && <ImageSelectors handleIncr={increaseCount} 
+          {tabletLayout && <ImageSelectors handleIncr={increaseCount} 
                           handleDecr={decreaseCount} 
                           position={"bottom-0 left-0"} 
                           display={"max-md:hidden"} />}

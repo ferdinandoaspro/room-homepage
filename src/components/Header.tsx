@@ -1,11 +1,9 @@
 export default function Header({backgroundCount, children, openDialog} : 
                     {backgroundCount: number, children: React.ReactNode[], openDialog: () => void}) {
 
-    const headerDesktopSrc: string = `/images/desktop-image-hero-${backgroundCount}.jpg`
-    const headerMobileSrc: string = `/images/mobile-image-hero-${backgroundCount}.jpg`
-    const headerAlts: Array<string> = ["Two white chairs beside a white table",
-                                        "An orange, a green and a white chair",
-                                        "Side view of a black chair"]
+    const headerDesktopSrc: Array<string> = ["/images/desktop-image-hero-1.jpg", "/images/desktop-image-hero-2.jpg","/images/desktop-image-hero-3.jpg"]
+    const headerMobileSrc: Array<string> = ["/images/mobile-image-hero-1.jpg", "/images/mobile-image-hero-2.jpg", "/images/mobile-image-hero-3.jpg"]
+    const headerAlts: Array<string> = ["Two white chairs beside a white table", "An orange, a green and a white chair", "Side view of a black chair"]
                                     
     
     return (
@@ -22,8 +20,8 @@ export default function Header({backgroundCount, children, openDialog} :
                 {children[1]}  
             </nav>
             <picture className="absolute w-full h-full md:max-lg:h-[56vh]">
-                <source srcSet={headerDesktopSrc} media="(min-width: 768px)"/>
-                <img src={headerMobileSrc} alt={headerAlts[backgroundCount - 1]} className="w-full h-full md:max-lg:h-[56vh]"/>
+                <source srcSet={headerDesktopSrc[backgroundCount]} media="(min-width: 768px)"/>
+                <img src={headerMobileSrc[backgroundCount]} alt={headerAlts[backgroundCount]} className="w-full h-full md:max-lg:h-[56vh]"/>
             </picture>
             {children[2]}
         </header>
